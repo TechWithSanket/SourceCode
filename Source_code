@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<titel>Google sheets</titel>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm shadow bg-white rounded">
+    <form method="post" autocomplete="off" name="Google-sheet">
+    	<h1> Contact us </h1>
+    	<div class="form-group">
+    <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" 
+    placeholder="Enter name"required>
+  </div>
+  <div class="form-group">
+    <input type="email"name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
+    placeholder="Enter email"required>
+  </div>
+    <div class="form-group">
+    <input type="text" name="phone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
+    placeholder="Enter phone"required>
+  </div>
+
+    <div class="form-group">
+    <textarea class="form-control" name="message" placeholder="Enter Your Message" required></textarea>
+  </div>
+
+
+<button type="submit" class="btn btn-primary">Submit</button><br><br>
+</form> 
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>	
+       <script>
+           const scriptURL ='12Tzcaa0lxhSxVfohzyMJN9MBRe64RgmRdRftikBQnl5dURemVZT2HN67'
+           const form = document.forms['google-sheet']
+
+           form.addEventListener('submit', e => {
+             e.preventDefault()
+             fetch((scriptURL, { method: 'POST', body: new FormData(form)})
+               .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon...")) 
+                .catch(error => console.error('Error!', error.message))
+            })
+          </scripts>
+
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/.min.js"></script>
+</body>
+</html>
